@@ -35,8 +35,7 @@
     "semantic-release-prepare": "ts-node tools/semantic-release-prepare",
     "semantic-release": "dotenv -c --  semantic-release",
     "semantic-release:local": "dotenv -c -- semantic-release --no-ci",
-    "postinstall": "ts-node tools/init",
-    "travis-deploy-once": "travis-deploy-once"
+    "postinstall": "ts-node tools/init"
   },
   "lint-staged": {
     "{src,test}/**/*.ts": [
@@ -96,7 +95,7 @@
     "cross-env": "^7.0.3",
     "cz-conventional-changelog": "^3.3.0",
     "dotenv-cli": "^6.0.0",
-    "eslint": "^8.27.0",
+    "eslint": "8.22.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.26.0",

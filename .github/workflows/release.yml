@@ -1,0 +1,26 @@
+name: Release
+on:
+  repository_dispatch:
+    types: [ semantic-release ]
+  push:
+    branches:
+      - master
+      - next
+      - beta
+      - "*.x" # maintenance releases such as 15.x
+
+jobs:
+  release:
+    name: release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: npm i
+      - run: npm run build
+      - run: npx semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
