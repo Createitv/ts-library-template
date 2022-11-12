@@ -1,6 +1,6 @@
 {
   "name": "--libraryname--",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "keywords": [],
   "main": "dist/--libraryname--.umd.js",
@@ -117,9 +117,9 @@
     "rollup-plugin-typescript2": "^0.34.1",
     "semantic-release": "^19.0.2",
     "shelljs": "^0.8.3",
-    "travis-deploy-once": "^5.0.9",
     "ts-jest": "^29.0.3",
     "ts-node": "^10.7.0",
+    "tslib": "^2.4.1",
     "typedoc": "^0.23.20",
     "typescript": "^4.8.4"
   }

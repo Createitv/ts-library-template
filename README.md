@@ -8,11 +8,11 @@
 
 A template project that makes creating a TypeScript library extremely easy.
 
-![](images/preview.png)
+![](https://typora-1300715298.cos.ap-shanghai.myqcloud.com/blogpreview.png)
 
 ### Features
 
-- Zero-setup. After running `npm install` things will setup for you :wink:
+- Zero-setup. After running `npm install` things will set up for you :wink:
 - **[RollupJS](https://rollupjs.org/)** for multiple optimized bundles following
   the [standard convention](http://2ality.com/2017/04/setting-up-multi-platform-packages.html)
   and [Tree-shaking](https://alexjoverm.github.io/2017/03/06/Tree-shaking-with-Webpack-2-TypeScript-and-Babel/)
@@ -68,6 +68,7 @@ import something from 'mylib/dist/lib/something'
 - `npm run lint`: Lints code
 - `npm run commit`: Commit using conventional commit
   style ([husky](https://github.com/typicode/husky) will tell you to use it if you haven't :wink:)
+- `npm run semantic-release:local`: local release (dry-run) 
 
 ### Excluding peerDependencies
 
@@ -99,7 +100,7 @@ commits.
 
 Automatic releases are possible thanks
 to [semantic release](https://github.com/semantic-release/semantic-release), which publishes your
-code automatically on [github](https://github.com/) and [npm](https://www.npmjs.com/), plus
+code automatically on [GitHub](https://github.com/) and [npm](https://www.npmjs.com/), plus
 generates automatically a changelog. This setup is highly influenced
 by [Kent C. Dodds course on egghead.io](https://egghead.io/courses/how-to-write-an-open-source-javascript-library)
 
@@ -113,7 +114,7 @@ the `npm run semantic-release-prepare` script. They make sure:
 - You follow
   a [conventional commit message](https://github.com/conventional-changelog/conventional-changelog)
 - Your build is not going to fail in [Travis](https://travis-ci.org) (or your CI server), since it's
-  runned locally before `git push`
+  run locally before `git push`
 
 This makes more sense in combination with [automatic releases](#automatic-releases)
 
