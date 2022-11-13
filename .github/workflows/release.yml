@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: 16
       - run: npm i
-      - run: npm test
+#       - run: npm test
       - run: npm run build
       - run: npm semantic-release
         env:
