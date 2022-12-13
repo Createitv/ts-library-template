@@ -1,28 +1,29 @@
 {
-  "name": "--libraryname--",
-  "version": "1.0.1",
+  "name": "ts-library-template",
+  "version": "0.0.0",
   "description": "",
   "keywords": [],
-  "main": "dist/--libraryname--.umd.js",
-  "module": "dist/--libraryname--.es5.js",
-  "typings": "dist/types/--libraryname--.d.ts",
+  "main": "dist/ts-library-template.umd.js",
+  "module": "dist/ts-library-template.es5.js",
+  "typings": "dist/types/ts-library-template.d.ts",
   "files": [
     "dist"
   ],
-  "author": "--username-- <--usermail-->",
+  "author": "createitv <xfy150150@163.com>",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/Createitv/tsl"
   },
   "license": "MIT",
   "engines": {
-    "node": ">=8.0.0"
+    "node": ">=6.0.0"
   },
   "scripts": {
     "lint": "eslint ./src ./test  --ext .js --ext .ts --fix --color",
+    "dev": "esno watch src/ts-library-template.ts",
     "prelint": "npx prettier --write src/**/*.ts test/**/*.ts",
     "prebuild": "rimraf dist",
-    "build": "tsc --module commonjs && rollup -c rollup.config.ts && typedoc --out docs --entryPoints src/--libraryname--.ts --theme default",
+    "build": "tsc --module commonjs && rollup -c rollup.config.ts && typedoc --out docs --entryPoints src/ts-library-template.ts --theme default",
     "start": "rollup -c rollup.config.ts -w",
     "test": "jest --coverage",
     "test:watch": "jest --coverage --watch",
@@ -33,9 +34,8 @@
     "precommit": "lint-staged",
     "commit": "git add -A && git-cz",
     "semantic-release-prepare": "ts-node tools/semantic-release-prepare",
-    "semantic-release": "dotenv -c --  semantic-release",
-    "semantic-release:local": "dotenv -c -- semantic-release --no-ci",
-    "postinstall": "ts-node tools/init"
+    "semantic-release": "semantic-release",
+    "travis-deploy-once": "travis-deploy-once"
   },
   "lint-staged": {
     "{src,test}/**/*.ts": [
@@ -74,6 +74,10 @@
       "src/*.{js,ts}"
     ]
   },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  },
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
@@ -85,6 +89,7 @@
     "@rollup/plugin-commonjs": "^23.0.2",
     "@rollup/plugin-json": "^5.0.1",
     "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-terser": "^0.2.0",
     "@types/jest": "^29.2.2",
     "@types/node": "^18.11.9",
     "@typescript-eslint/eslint-plugin": "^5.42.1",
@@ -94,8 +99,7 @@
     "coveralls": "^3.0.2",
     "cross-env": "^7.0.3",
     "cz-conventional-changelog": "^3.3.0",
-    "dotenv-cli": "^6.0.0",
-    "eslint": "8.22.0",
+    "eslint": "^8.27.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.26.0",
@@ -113,13 +117,12 @@
     "rimraf": "^3.0.2",
     "rollup": "^2.70.1",
     "rollup-plugin-sourcemaps": "^0.6.3",
-    "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.34.1",
     "semantic-release": "^19.0.2",
     "shelljs": "^0.8.3",
+    "travis-deploy-once": "^5.0.9",
     "ts-jest": "^29.0.3",
     "ts-node": "^10.7.0",
-    "tslib": "^2.4.1",
     "typedoc": "^0.23.20",
     "typescript": "^4.8.4"
   }
