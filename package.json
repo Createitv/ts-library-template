@@ -1,29 +1,29 @@
 {
-  "name": "ts-library-template",
-  "version": "0.0.0",
+  "name": "--libraryname--",
+  "version": "0.0.1",
   "description": "",
   "keywords": [],
-  "main": "dist/ts-library-template.umd.js",
-  "module": "dist/ts-library-template.es5.js",
-  "typings": "dist/types/ts-library-template.d.ts",
+  "main": "dist/--libraryname--.umd.js",
+  "module": "dist/--libraryname--.es5.js",
+  "typings": "dist/types/--libraryname--.d.ts",
   "files": [
     "dist"
   ],
-  "author": "createitv <xfy150150@163.com>",
+  "author": "--username-- <--usermail-->",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Createitv/tsl"
+    "url": ""
   },
   "license": "MIT",
   "engines": {
-    "node": ">=6.0.0"
+    "node": ">=14.0.0"
   },
   "scripts": {
     "lint": "eslint ./src ./test  --ext .js --ext .ts --fix --color",
     "dev": "esno watch src/ts-library-template.ts",
     "prelint": "npx prettier --write src/**/*.ts test/**/*.ts",
     "prebuild": "rimraf dist",
-    "build": "tsc --module commonjs && rollup -c rollup.config.ts && typedoc --out docs --entryPoints src/ts-library-template.ts --theme default",
+    "build": "tsc --module commonjs && rollup -c rollup.config.ts && typedoc --out docs --entryPoints src/--libraryname--.ts --theme default",
     "start": "rollup -c rollup.config.ts -w",
     "test": "jest --coverage",
     "test:watch": "jest --coverage --watch",
@@ -73,10 +73,6 @@
     "collectCoverageFrom": [
       "src/*.{js,ts}"
     ]
-  },
-  "prettier": {
-    "semi": false,
-    "singleQuote": true
   },
   "commitlint": {
     "extends": [
