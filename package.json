@@ -12,7 +12,7 @@
   "author": "--username-- <--usermail-->",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/Createitv/ts-library-template"
   },
   "license": "MIT",
   "engines": {

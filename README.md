@@ -8,7 +8,7 @@
 
 A template project that makes creating a TypeScript library extremely easy.
 
-![](https://typora-1300715298.cos.ap-shanghai.myqcloud.com/blogpreview.png)
+![screenshot](https://typora-1300715298.cos.ap-shanghai.myqcloud.com/blogpreview.png)
 
 ### Features
 
