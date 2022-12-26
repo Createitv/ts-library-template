@@ -35,7 +35,6 @@
     "commit": "git add -A && git-cz",
     "semantic-release-prepare": "ts-node tools/semantic-release-prepare",
     "semantic-release": "semantic-release",
-    "travis-deploy-once": "travis-deploy-once",
     "postinstall": "ts-node tools/init"
   },
   "lint-staged": {
@@ -117,7 +116,6 @@
     "rollup-plugin-typescript2": "^0.34.1",
     "semantic-release": "^19.0.2",
     "shelljs": "^0.8.3",
-    "travis-deploy-once": "^5.0.9",
     "ts-jest": "^29.0.3",
     "ts-node": "^10.7.0",
     "typedoc": "^0.23.20",
