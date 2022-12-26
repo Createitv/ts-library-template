@@ -1,5 +1,5 @@
 {
-  "name": "--libraryname--",
+  "name": "ts-library-templates",
   "version": "0.0.1",
   "description": "",
   "keywords": [],
@@ -19,9 +19,9 @@
     "node": ">=14.0.0"
   },
   "scripts": {
-    "lint": "eslint ./src ./test  --ext .js --ext .ts --fix --color",
+    "lint": "eslint ./src ./test ./tools --ext .js --ext .ts --fix --color",
     "dev": "esno watch src/ts-library-template.ts",
-    "prelint": "npx prettier --write src/**/*.ts test/**/*.ts",
+    "prelint": "npx prettier --write src/**/*.ts test/**/*.ts tools/**/*.ts",
     "prebuild": "rimraf dist",
     "build": "tsc --module commonjs && rollup -c rollup.config.ts && typedoc --out docs --entryPoints src/--libraryname--.ts --theme default",
     "start": "rollup -c rollup.config.ts -w",
